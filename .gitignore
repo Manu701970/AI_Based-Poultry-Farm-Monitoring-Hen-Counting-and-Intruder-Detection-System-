@@ -1,0 +1,11 @@
+@'
+venv
+dataset
+video
+output
+runs
+model
+__pycache__
+*.pyc
+Smart-Poultry-Farm-Monitoring
+'@ | Set-Content -Encoding utf8 .gitignore
