@@ -1,192 +1,147 @@
-# 🐔 AI-Based Poultry Farm Monitoring System
-### Automated Hen Counting & Intruder Detection Using Computer Vision
+🐔 AI-Based Poultry Farm Monitoring System
 
-<p align="center">
-  <b>An AI-powered computer vision application for poultry farm monitoring, hen counting and potential intruder detection using YOLO object detection and tracking.</b>
-</p>
+Smart Hen Counting and Intruder Detection Using Computer Vision
 
-<p align="center">
-  <a href="https://gpzd2mfzchwmgcnryzknjr.streamlit.app/">🚀 LIVE DEMO</a> •
-  <a href="https://github.com/Manu701970/AI_Based-Poultry-Farm-Monitoring-Hen-Counting-and-Intruder-Detection-System-">📂 SOURCE CODE</a>
-</p>
-
----
-
-## 🚀 Live Application
-
-### 👉 [OPEN THE LIVE AI POULTRY MONITORING APPLICATION](https://gpzd2mfzchwmgcnryzknjr.streamlit.app/)
-
-Upload a video and use the web application to detect, track and count hens and identify potential intruders.
-
----
-
-## 📌 Project Overview
-
-Traditional poultry farm monitoring often requires manual observation to monitor birds and identify potential threats.
-
-This project introduces an AI-based poultry monitoring system built using computer vision and YOLO object detection. The application processes uploaded videos, identifies hens, tracks individual detections using tracking IDs, counts unique hens and detects potential intruders.
-
-The application provides a Streamlit dashboard where users can upload videos, configure detection settings and view monitoring results.
-
-## ✨ Key Features
-
-- 🐔 **AI-Based Hen Detection** – Detect hens in video frames using a custom-trained YOLO model.
-- 🔢 **Unique Hen Counting** – Track individual hens using tracking IDs to estimate the number of unique hens detected.
-- 🚨 **Intruder Detection** – Detect potential intruders, including animals and people supported by the object detection model.
-- 🎥 **Video-Based Monitoring** – Upload video files and process them using computer vision.
-- 📊 **Monitoring Dashboard** – View detection statistics, tracking information and processing results.
-- ⚙️ **Adjustable Detection Settings** – Configure confidence and detection thresholds.
-- 📥 **Processed Results** – View and download the processed monitoring output when supported by the application.
-- ☁️ **Web Deployment** – Access the application online without installing the project locally.
-
-## 🖥️ Application Preview
+An AI-powered poultry farm monitoring application that uses computer vision and YOLO object detection to identify and count hens and detect potential intruders from images or video streams.
 
 <p align="center">
   <a href="https://gpzd2mfzchwmgcnryzknjr.streamlit.app/">
-    <img src="https://img.shields.io/badge/Streamlit-Live%20Application-red?style=for-the-badge&logo=streamlit" alt="Live application"/>
+    <img src="https://img.shields.io/badge/Live%20Demo-Streamlit-red?style=for-the-badge&logo=streamlit" alt="Live Demo">
   </a>
-</p>
+  <a href="https://github.com/Manu701970/AI_Based-Poultry-Farm-Monitoring-Hen-Counting-and-Intruder-Detection-System-">
+    <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github" alt="GitHub">
+  </a>
+</p>---
 
-> Visit the live application to view the monitoring dashboard and upload a video.
+🚀 Live Application
 
-## 🧠 System Architecture
+Try the project here:
 
-```mermaid
-flowchart TD
-    A[Upload Video] --> B[Video Frame Extraction]
-    B --> C[Custom YOLO Hen Detection]
-    C --> D[Hen Tracking]
-    B --> E[YOLO Intruder Detection]
-    D --> F[Unique Hen Counting]
-    E --> G[Intruder Tracking]
-    F --> H[Monitoring Dashboard]
-    G --> H
-    H --> I[Display Results]
-```
+👉 https://gpzd2mfzchwmgcnryzknjr.streamlit.app/
 
-## 🔄 Working Process
+📌 Project Overview
 
-1. **Video Input** – The user uploads a video through the Streamlit application.
-2. **Frame Extraction** – The uploaded video is processed frame by frame.
-3. **Hen Detection** – The custom-trained YOLO model identifies hens.
-4. **Hen Tracking** – Tracking algorithms assign and maintain tracking IDs across frames.
-5. **Hen Counting** – Unique tracking IDs are used to estimate the number of hens detected.
-6. **Intruder Detection** – A YOLO object detection model identifies supported potential intruder classes.
-7. **Result Visualization** – Detection and tracking results are presented through the monitoring dashboard.
+Traditional poultry farm monitoring often requires continuous manual observation. This project aims to simplify monitoring through AI-based computer vision.
 
-## 🛠️ Technologies Used
+The system processes visual input and detects objects using a trained YOLO model. It provides an interface for monitoring hen counts and identifying potential intruders.
 
-| Technology | Purpose |
-|---|---|
-| Python | Core programming language |
-| Ultralytics YOLO | Object detection and tracking |
-| OpenCV | Video processing and image handling |
-| Streamlit | Web application and dashboard |
-| NumPy | Numerical operations |
-| Pandas | Data processing |
+✨ Key Features
 
-## 🤖 AI Models
+- 🐔 Hen Detection: Identifies hens using YOLO object detection.
+- 🔢 Automatic Hen Counting: Counts detected hens in the input.
+- 🚨 Intruder Detection: Identifies objects classified as potential intruders by the trained model.
+- 🎥 Visual Monitoring: Supports the project's image/video monitoring workflow.
+- 📊 Interactive Dashboard: Displays detection results through Streamlit.
+- ⚡ AI-Based Processing: Uses computer vision for automated detection.
 
-### Hen Detection Model
-- Custom-trained YOLO model.
-- Used to identify hens in video frames.
-- Tracking is used to estimate unique hen counts.
+🛠️ Technologies Used
 
-### Intruder Detection Model
-- YOLOv8n pretrained object detection model.
-- Detects supported objects from the pretrained model's classes.
-- Tracking is used to monitor detections across video frames.
+Technology| Purpose
+Python| Core programming
+YOLOv8 / Ultralytics| Object detection
+OpenCV| Image and video processing
+Streamlit| Web application
+NumPy| Numerical operations
+Pandas| Data handling
 
-## 📂 Project Structure
+🏗️ System Workflow
 
-```text
-AI-Based-Poultry-Farm-Monitoring/
+1. Upload or provide visual input.
+2. The application processes the input.
+3. The trained YOLO model detects objects.
+4. Detected hens are counted.
+5. Potential intruders are identified based on model classes.
+6. Results are displayed in the dashboard.
+
+📂 Project Structure
+
+AI-Poultry-Farm-Monitoring/
 │
 ├── app.py
-├── hen_best.pt
-├── yolov8n.pt
-├── requirements.txt
 ├── train_model.py
+├── hen_best.pt
+├── requirements.txt
+├── packages.txt
 ├── README.md
-└── .gitignore
-```
+├── .gitignore
+│
+└── Other project files
 
-## ⚙️ Installation and Setup
+The structure above is illustrative; actual files may vary.
 
-Run the project locally if you want to use it on your computer.
+⚙️ Installation and Setup
 
-### Step 1: Clone the repository
+1. Clone the repository
 
-```bash
 git clone https://github.com/Manu701970/AI_Based-Poultry-Farm-Monitoring-Hen-Counting-and-Intruder-Detection-System-.git
-```
 
-### Step 2: Navigate to the project directory
+2. Open the project folder
 
-```bash
 cd AI_Based-Poultry-Farm-Monitoring-Hen-Counting-and-Intruder-Detection-System-
-```
 
-### Step 3: Install dependencies
+3. Create a virtual environment
 
-```bash
+python -m venv venv
+
+4. Activate the environment
+
+Windows:
+
+venv\Scripts\activate
+
+5. Install dependencies
+
 pip install -r requirements.txt
-```
 
-### Step 4: Launch the application
+6. Run the application
 
-```bash
 streamlit run app.py
-```
 
-The application will open in your local browser.
+The application will open in your browser.
 
-## 📦 Requirements
+🧠 Model Information
 
-- Python
-- Internet connection for initial dependency installation
-- Required Python packages listed in `requirements.txt`
-- Video files supported by the application
+The project uses the Ultralytics YOLO framework for object detection.
 
-## 🎯 Project Objectives
+The trained model file is:
 
-- Automate hen detection and counting.
-- Reduce manual poultry farm monitoring.
-- Detect potential intruders through computer vision.
-- Apply AI-based object detection and tracking to agricultural monitoring.
-- Develop an accessible web-based monitoring application.
+hen_best.pt
 
-## 🔮 Future Enhancements
+The model's detection performance depends on the quality of the training dataset and input images or videos.
 
-- Real-time monitoring using CCTV cameras.
-- Improved counting accuracy in crowded environments.
-- Poultry movement and activity analysis.
-- Automatic alert notifications for detected intruders.
-- Poultry health and abnormal behavior monitoring.
-- Database integration for historical monitoring records.
-- Farm-level monitoring analytics.
+☁️ Deployment
 
-## ⚠️ Limitations
+The application is deployed using Streamlit Community Cloud.
 
-- Counting accuracy depends on video quality, lighting and visibility.
-- Tracking IDs may change when objects overlap, disappear or re-enter the frame.
-- Intruder detection depends on the pretrained model's supported classes.
-- The application is designed for video-based monitoring and does not guarantee perfect detection.
-- Cloud processing is subject to hosting platform resource and file upload limits.
+Live link: https://gpzd2mfzchwmgcnryzknjr.streamlit.app/
 
-## 🌐 Project Links
+🔮 Future Enhancements
 
-| Resource | Link |
-|---|---|
-| 🚀 Live Application | [Open Live App](https://gpzd2mfzchwmgcnryzknjr.streamlit.app/) |
-| 📂 GitHub Repository | [View Source Code](https://github.com/Manu701970/AI_Based-Poultry-Farm-Monitoring-Hen-Counting-and-Intruder-Detection-System-) |
+- Real-time CCTV camera integration.
+- Improved intruder classification.
+- Poultry activity monitoring.
+- Historical detection reports.
+- Email or mobile alerts.
+- Database integration for monitoring records.
+
+🎯 Applications
+
+- Poultry farms
+- Smart agriculture
+- Livestock monitoring
+- Automated farm security
+- AI-based animal detection research
+
+👨‍💻 Author
+
+Manu S MANU
+
+GitHub: https://github.com/Manu701970
+
+⭐ Support
+
+If you find this project interesting, consider giving the repository a ⭐ on GitHub!
 
 ---
 
-<p align="center">
-  <b>AI-Powered Poultry Monitoring Using Computer Vision</b>
-</p>
-
-<p align="center">
-  Developed using Python, YOLO, OpenCV and Streamlit.
-</p>
+Developed using Python, YOLO, OpenCV and Streamlit.
